@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main(void);
+void printScores(float scores[]);
+
+int main(void)
+{
+	char s_name[] = "Ecpi University";
+	float scores[6] = {78.7,98.4,100.0,96.5,100.0,88.8};
+	float average=0.0;
+	int counter;
+	
+	printScores(scores);
+	
+	
+	for (counter=0; counter<6; counter++)
+	   { average += scores[counter]; }
+	   
+	   average /= (float)6;
+	   
+	   printf("At %s, your class average is %.1f.",s_name,average);
+	   return 0;
+}
+void printScores(float scores[6])
+{
+	 
+	 int counter;
+	 
+	 printf("Here are your scores:\n");
+	 for (counter=0; counter<6; counter++)  
+	   printf("%.1f\n",scores[counter]);
+	 return;
+}
